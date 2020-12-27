@@ -6,7 +6,7 @@
   (->> 
       (clojure.string/lower-case word)
       (remove #(contains? #{\space \-} %))
-      frequencies
-      vals
+      (frequencies)
+      (vals)
       (every? #(= 1 %))))
    

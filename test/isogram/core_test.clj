@@ -13,3 +13,8 @@
 (deftest test-isogram-special-characters 
   (testing "m#urci$el#ago is an isogram "
     (is (isogram.core/isogram? "murci$el#ago"))))
+
+
+(deftest test-isogram-blank-spaces
+  (testing "mur cie lago is an isogram "
+    (is (isogram.core/isogram? "mur cie lago"))))
