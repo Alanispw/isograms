@@ -18,3 +18,7 @@
 (deftest test-isogram-blank-spaces
   (testing "mur cie lago is an isogram "
     (is (isogram.core/isogram? "mur cie lago"))))
+
+(deftest test-not-isogram
+  (testing "aGu il#a is an isogram "
+    (is (not (isogram.core/isogram? "aGu il#a")))))
