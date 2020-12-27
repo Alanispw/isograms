@@ -1,11 +1,12 @@
 (ns isogram.core
   (:require [clojure.string]))
 
-(defn isogram? [w]
-  [w]
-  (every? #(= 1 %)
-  (-> w 
-      (clojure.string/lower-case)
-      (frequencies)
-      (vals)))
-     )
+(defn isogram? [word]
+  [word]
+  (->> 
+      (clojure.string/lower-case word)
+      (remove #(contains? #{\space \-} %))
+      frequencies
+      vals
+      (every? #(= 1 %))))
+   

@@ -9,3 +9,7 @@
 (deftest test-isogram-mayus
   (testing "MurCielaGo is an isogram "
     (is (isogram.core/isogram? "MurCielaGo"))))
+
+(deftest test-isogram-special-characters 
+  (testing "m#urci$el#ago is an isogram "
+    (is (isogram.core/isogram? "murci$el#ago"))))
